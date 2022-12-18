@@ -13,21 +13,22 @@ def my():
 
 @app.route("/predict",methods = ["POST", "GET"])
 def home():
-    a = request.form['a']
-    b = request.form['b']
-    c = request.form['c']
-    d = request.form['d']
-    e = request.form['e']
-    f = request.form['f']
-    g = request.form['g']
-    h = request.form['h']
-    i = request.form['i']
-    j = request.form['j']
-  
+    a = eval(request.form['bedrooms'])
+    b = eval(request.form['bathrooms'])
+    c = eval(request.form['parking'])
+    d = eval(request.form['furnishingstatus'])
+    e = eval(request.form['mainroad'])
+    f = eval(request.form['guestroom'])
+    g = eval(request.form['airconditioning'])
+    h = eval(request.form['hotwaterheating'])
+    i = eval(request.form['prefarea'])
+    j = eval(request.form['area'])
+
+
 
     arr = np.array([[a, b, c, d, e, f, g, h, i, j]])
     pred = model.predict(arr)
-    return render_template('after.html', prediction = pred)
+    return render_template('after.html', prediction_text = pred)
 
 
 if __name__ == "__main__":
@@ -36,10 +37,10 @@ if __name__ == "__main__":
 
 # @app.route('/predict1')
 # def predict1():
-#     a = int(request.args.get('a'))
-#     b = int(request.args.get('b'))
-#     c = int(request.args.get('c'))
-#     d = int(request.args.get('d'))
+#     a = eval(request.args.get('a'))
+#     b = eval(request.args.get('b'))
+#     c = eval(request.args.get('c'))
+#     d = eval(request.args.get('d'))
 
 #     arr = np.array([[a, b, c, d, e, f, g, h, i, j]])
 #     pred = model.predict(arr)
