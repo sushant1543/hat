@@ -9,9 +9,9 @@ app = Flask(__name__)
 
 @app.route("/")
 def my():
-    return render_template("home.html", posts=posts )
+    return render_template("home.html" )
 
-@app.route("/predict",methods = ["POST"])
+@app.route("/predict",methods = ["POST", "GET"])
 def home():
     a = request.form['a']
     b = request.form['b']
@@ -27,11 +27,11 @@ def home():
 
     arr = np.array([[a, b, c, d, e, f, g, h, i, j]])
     pred = model.predict(arr)
-    return render_template('after.html', data=pred)
+    return render_template('after.html', prediction = pred)
 
 
 if __name__ == "__main__":
-    app.run(host='0.0.0.0', port=8080, debug=False)   
+    app.run(host='0.0.0.0' , port= config1.PORT_NUMBER, debug=True)   
 
 # @app.route('/predict1')
 # def predict1():
