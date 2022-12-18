@@ -5,7 +5,7 @@ import pickle
 
 df = pd.read_csv(r"C:\Users\suyas\velocity_sushant_15\EXCEL FILES\Housing.csv")
 
-X = np.array(df.iloc[:, 0:4])
+X = np.array(df.iloc[:, 0:10])
 y = np.array(df.iloc[:, 4:])
 
 from sklearn.preprocessing import LabelEncoder

@@ -6,34 +6,23 @@
         <h1> predict </h1><br>
         
         <form method="POST", action="{{url_for('home')}}">
-           <b> Zeroth value : <input type="eval", name='bedrooms', placeholder="enter value"> <br><br>
-            First value :  <input type="eval", name='bathrooms', placeholder="enter value"> <br><br>
-            Second value :  <input type="eval", name='parking', placeholder="enter value"> <br><br>
-            Third value :  <input type="eval", name='furnishingstatus', placeholder="enter value"> <br><br>
-            Fourth value :  <input type="eval", name='mainroad', placeholder="enter value"> <br><br>
-            Fifth value :  <input type="eval", name='guestroom', placeholder="enter value"> <br><br>
-            Sixth value :  <input type="eval", name='airconditioning', placeholder="enter value"> <br><br>
-            Seventh value :  <input type="eval", name='hotwaterheating', placeholder="enter value"> <br><br>
-            Eighth value :  <input type="eval", name='prefarea', placeholder="enter value"> <br><br>
-            Nevalh value :  <input type="eval", name='area', placeholder="enter value"> <br><br><br></b>
-            <input type="submit" , value='predict!' >
-        </form>
+          
 
-        <label>bedrooms in (num):  </label>
+        <label>bedrooms         :  </label>
         <input style="font-size:15px" type = "number" name = "bedrooms" min="1" max="6" placeholder="enter value" size="30" required>
         <!-- <h1 style="color:rgb(255, 255, 255);font-size:10px;">Eg: (0 to 6)</h1> -->
         <br>
 
 
 
-        <label>bathrooms in (cm) : </label>
+        <label>bathrooms        : </label>
         <input style="font-size:15px" type = "number" name = "bathrooms" min="1" max="5" placeholder="enter value" size="30" required>
         <!-- <h1 style="color:rgb(255, 255, 255);font-size:10px;">Eg: (0 to 5)</h1> -->
         <br>
 
 
 
-        <label>parking in (cm) : </label>
+        <label>parking          : </label>
         <input style="font-size:15px" type = "number" name = "parking" min="0" max="1" placeholder="enter value" size="30" required>
         <!-- <h1 style="color:rgb(255, 255, 255);font-size:10px;">Eg: (5 to 70)cm</h1> -->
         <br>
@@ -47,40 +36,40 @@
 
 
 
-        <label>mainroad : </label>
+        <label>mainroad         : </label>
         <input style="font-size:15px" type = "number" name = "mainroad" min="1" max="4" placeholder="enter value" size="30" required>
         <!-- <h1 style="color:rgb(255, 255, 255);font-size:10px;">Eg: (1 to 10)cm</h1> -->
         <br>
 
-        <label>guestroom:  </label>
+        <label>guestroom        : </label>
         <input style="font-size:15px" type = "number" name = "guestroom" min="1" max="5" placeholder="enter value" size="30" required>
         <!-- <h1 style="color:rgb(255, 255, 255);font-size:10px;">Eg: (7 to 60)cm</h1> -->
         <br>
 
 
 
-        <label>airconditioning : </label>
+        <label>airconditioning  : </label>
         <input style="font-size:15px" type = "number" name = "airconditioning" min="0" max="1" placeholder="enter value" size="30" required>
         <!-- <h1 style="color:rgb(255, 255, 255);font-size:10px;">Eg: (5 to 65)cm</h1> -->
         <br>
 
 
 
-        <label>hotwaterheating : </label>
+        <label>hotwaterheating  : </label>
         <input style="font-size:15px" type = "number" name = "hotwaterheating" min="0" max="1" placeholder="enter value" size="30" required>
         <!-- <h1 style="color:rgb(255, 255, 255);font-size:10px;">Eg: (5 to 70)cm</h1> -->
         <br>
 
 
 
-        <label>prefarea : </label>
+        <label>prefarea         : </label>
         <input style="font-size:15px" type = "number" name = "prefarea" min="0" max="1" placeholder="enter value" size="30" required>
         <!-- <h1 style="color:rgb(255, 255, 255);font-size:10px;">Eg: (1 to 20)cm</h1> -->
         <br>
 
 
 
-        <label>area in (m) : </label>
+        <label>area in (m2)     : </label>
         <input style="font-size:15px" type = "number" name = "area" min="1" max="1000" placeholder="enter value" size="30" required>
         <!-- <h1 style="color:rgb(255, 255, 255);font-size:10px;">Eg: (1 to 1000)m</h1> -->
         <br>
@@ -127,10 +116,10 @@
             right: 0;
             }
         </style>
-        <button style="font-size:20px;vertical-align:middle;font-family:verdana" type="submit" value="Submit" class="button"><span>Estimated Weight </span></button>
+        <button style="font-size:20px;vertical-align:middle;font-family:verdana" type="submit" value="Submit" class="button"><span>prediction price </span></button>
         <br><br>
         <div style="font-size:25px;font-family:verdana" id="box">{{ prediction_text }} </div>&nbsp;
-        <div style="font-size:25px;font-family:verdana" class="card-title">grams</div>
+        <div style="font-size:25px;font-family:verdana" class="card-title">Ruppes</div>
         <br>
         <p>© Sushant S Bansode.</p>
     <!-- <input type = "submit" value="SUBMIT">
